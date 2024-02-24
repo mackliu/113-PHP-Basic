@@ -167,6 +167,46 @@ for($i=0;$i<6;$i++){
 
 ?>
 </table>
+<h3><?php echo date("m月");?></h3>
+<table>
+<tr>
+    <td></td>
+    <td>日</td>
+    <td>一</td>
+    <td>二</td>
+    <td>三</td>
+    <td>四</td>
+    <td>五</td>
+    <td>六</td>
+</tr>
+<?php
+$firstDay=date("Y-m-1");
+$firstDayTime=strtotime($firstDay);
+$firstDayWeek=date("w",strtotime(date("Y-m-1")));
+
+for($i=0;$i<6;$i++){
+    echo "<tr>";
+    echo "<td>";
+    echo $i+1;
+    echo "</td>";
+    for($j=0;$j<7;$j++){
+        echo "<td>";
+        $cell=$i*7+$j -$firstDayWeek;
+        $theDayTime=strtotime("$cell days".$firstDay);
+        echo date("d",$theDayTime);
+        echo "</td>";
+    }
+    
+
+    echo "</tr>";
+
+
+}
+
+
+
+?>
+</table>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
