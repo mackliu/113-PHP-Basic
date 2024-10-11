@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>程式語言基礎</title>
+    <title>程式語言基礎/github 操作練習</title>
 </head>
 <body>
 <?php
