@@ -162,6 +162,32 @@ for($j=0;$j<=9;$j++){
 echo "</table>";
 
 ?>
+<h2>半邊九九乘法表</h2>
+<?php
+echo "<table class='nine'>";
+for($j=0;$j<=9;$j++){
+    echo "<tr>";
+    for($i=0;$i<=9;$i++){
+        echo "<td>";
+        if($j==0 && $i==0){
+            echo "";
+        }else if($j==0){
+            echo $i;
+        }else if($i==0){
+            echo $j;
+        }else{
+            if($i>=$j){
+                echo ($j*$i);
+            }
+        }
+
+        echo "</td>";
+    }
+    echo "</tr>";
+}
+echo "</table>";
+
+?>
 <!-- table>tr*9>td*9 -->
 
 <p>&nbsp;</p>
