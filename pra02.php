@@ -99,7 +99,6 @@ for($i=3;$i<=$n;$i=$i+2){
     if($t==true){
         echo "$i ,";
     }
-
 }
 echo "<br>";
 echo $count;
