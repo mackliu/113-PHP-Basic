@@ -150,7 +150,21 @@ for($i=0;$i<21;$i++){
 }
 ?>
 <h2>矩形練習</h2>
- <?php 
+<?php 
+for($i=0;$i<5;$i++){
+    for($j=0;$j<5;$j++){
+        if($i==0 || $i==4){
+            echo "*";
+        }else if($j==0 ||$j==4){
+            echo "*";
+        }else{
+            echo "&nbsp;";
+        }
+    }
+    echo "<br>";
+}
+
+
 
 ?>
 
