@@ -39,13 +39,31 @@ foreach($nums as $num){
 echo "<hr>";
 echo join(", ",$nums) ;
 
+?>
+<h2>找出五百年內的閏年</h2>
 
+<ul>
+    <li>請依照閏年公式找出五百年內的閏年</li>
+    <li>使用陣列來儲存閏年</li>
+    <li>使用迴圈來印出閏年</li>
+</ul>
+<?php
 
+$leap=[];
+
+for($i=2024;$i<=2524;$i++){
+    if($i % 4==0 && ($i % 100 != 0 || $i % 400 == 0)){
+        $leap[]=$i;
+
+    }
+}
+
+echo "<pre>";
+print_r($leap);
+echo "</pre>";
 
 
 ?>
-
-
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
