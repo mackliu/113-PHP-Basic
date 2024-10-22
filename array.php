@@ -233,6 +233,36 @@ foreach($nine as $idx => $n){
         echo $n . ", ";
     }
 }
+echo "<table>";
+foreach($nine as $idx => $n){
+    if($idx%9==8){
+        echo "<td>$n</td></tr>";
+
+    }else if($idx%9==0){
+        echo "<tr><td>$n</td>";
+        
+    }else{
+        echo "<td>$n</td>";
+    }
+}
+echo "</table>";
+
+echo "<hr>";
+
+echo "<table>";
+foreach($nine as $idx => $n){
+    $v=explode("=",$n)[1];
+    if($idx%9==8){
+        echo "<td>$v</td></tr>";
+
+    }else if($idx%9==0){
+        echo "<tr><td>$v</td>";
+
+    }else{
+        echo "<td>$v</td>";
+    }
+}
+echo "</table>";
 
 
 /* echo "<table>";
