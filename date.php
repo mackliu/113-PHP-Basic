@@ -142,6 +142,8 @@ for($i=0;$i<5;$i++){
 </tr>
 <?php
 $d=strtotime("2024-6");
+$firstDayWeek=date("w",strtotime(date("Y-m-1")));
+
 for($i=0;$i<6;$i++){
     echo "<tr>";
     echo "<td>";
@@ -149,8 +151,8 @@ for($i=0;$i<6;$i++){
     echo "</td>";
     for($j=0;$j<7;$j++){
         echo "<td>";
-        $dayNum=$i*7 + $j +1;
-        if($dayNum<=date('t')){
+        $dayNum=$i*7 + $j +1 - $firstDayWeek;
+        if($dayNum<=date('t') && $dayNum >0){
             echo $dayNum;
         }
         echo "</td>";
